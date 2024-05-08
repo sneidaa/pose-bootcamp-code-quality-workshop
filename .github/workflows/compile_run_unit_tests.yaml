@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-      clean: true
+          clean: true
 
       # Replace these steps with your specific compilation and execution commands
       - name: Install dependencies
