@@ -1,0 +1,31 @@
+name: compile_run_unit_tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+      clean: true
+
+      # Replace these steps with your specific compilation and execution commands
+      - name: Install dependencies
+        run: 
+          # Install your program's dependencies here (e.g., apt-get install build-essential)
+
+      - name: Compile
+        run: cmake -S . -B build
+          # Replace with your specific compilation command (e.g., make)
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Run
+        run: ./build/address_book_tests
+          # Replace with your specific command to run the program (e.g., ./myprogram)
