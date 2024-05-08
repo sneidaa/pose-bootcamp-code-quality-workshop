@@ -14,11 +14,6 @@ jobs:
         with:
           clean: true
 
-      # Replace these steps with your specific compilation and execution commands
-      - name: Install dependencies
-        run: 
-          # Install your program's dependencies here (e.g., apt-get install build-essential)
-
       - name: Compile
         run: cmake -S . -B build
           # Replace with your specific compilation command (e.g., make)
